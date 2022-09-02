@@ -14,7 +14,7 @@ const Nav = styled.nav`
 
 const Brand = styled.div`
   font-size: 2rem;
-  margin-left: 2rem;
+  margin-left: 6rem;
 `;
 
 const ContactButton = styled.button`

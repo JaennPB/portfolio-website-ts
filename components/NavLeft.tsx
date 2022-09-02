@@ -1,5 +1,9 @@
 import React from "react";
 
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faBriefcase, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -9,6 +13,7 @@ const Nav = styled.nav`
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MenuHamburger = styled.div`
@@ -17,17 +22,30 @@ const MenuHamburger = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: 2.5rem;
+
+  :hover {
+    transform: scale(1.2);
+  }
 `;
 
 const SocialLinks = styled.div`
-  height: 100%;
+  height: 25%;
+  padding-bottom: 6rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+`;
 
-  margin-bottom: 6rem;
+const Link = styled.div`
+  font-size: 2.5rem;
+
+  :hover {
+    transform: scale(1.2);
+  }
 `;
 
 interface Props {}
@@ -35,10 +53,19 @@ interface Props {}
 const NavLeft: React.FC<Props> = ({}) => {
   return (
     <Nav>
-      <MenuHamburger>Menu</MenuHamburger>
+      <MenuHamburger>
+        <FontAwesomeIcon icon={faRocket} />
+      </MenuHamburger>
       <SocialLinks>
-        <p>LinkedIn</p>
-        <p>Upwork</p>
+        <Link>
+          <FontAwesomeIcon icon={faLinkedin} />
+        </Link>
+        <Link>
+          <FontAwesomeIcon icon={faGithub} />
+        </Link>
+        <Link>
+          <FontAwesomeIcon icon={faBriefcase} />
+        </Link>
       </SocialLinks>
     </Nav>
   );
