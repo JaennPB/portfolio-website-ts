@@ -1,13 +1,13 @@
 import React from "react";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBriefcase, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  border-right: 2px solid #102a44;
+  border-right: 2px solid #284e73;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 
@@ -26,8 +26,10 @@ const MenuHamburger = styled.div`
   font-size: 2.5rem;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
+
+  transition: 100ms;
 `;
 
 const SocialLinks = styled.div`
@@ -44,17 +46,17 @@ const Link = styled.div`
   font-size: 2.5rem;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
+
+  transition: 100ms;
 `;
 
-interface Props {}
-
-const NavLeft: React.FC<Props> = ({}) => {
+const NavLeft: React.FC = () => {
   return (
     <Nav>
       <MenuHamburger>
-        <FontAwesomeIcon icon={faRocket} />
+        <FontAwesomeIcon icon={faBars} />
       </MenuHamburger>
       <SocialLinks>
         <Link>
